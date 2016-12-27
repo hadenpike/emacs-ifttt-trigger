@@ -50,7 +50,8 @@
 
 When called interactively, prompts for event name."
   (interactive (list (read-string "Event name: ")))
-  (let ((event-url (format *ifttt-maker-url* event-name ifttt-secret-key)))
+  (let ((emacspeak-speak-messages nil) ;; Suppresses automatic speaking for the duration of this function.
+	(event-url (format *ifttt-maker-url* event-name ifttt-secret-key)))
     (ifttt-url-post event-url)))
 
 (provide 'ifttt-trigger)
