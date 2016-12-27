@@ -46,8 +46,10 @@
 
 ;;;###autoload
 (defun ifttt-trigger (event-name)
-  "Trigger the action defined by making a POST request to the URL defined by event-name."
-  (interactive)
+  "Trigger the action defined by making a POST request to the URL defined by event-name.
+
+When called interactively, prompts for event name."
+  (interactive (list (read-string "Event name: ")))
   (let ((event-url (format *ifttt-maker-url* event-name ifttt-secret-key)))
     (ifttt-url-post event-url)))
 
