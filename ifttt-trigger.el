@@ -1,4 +1,4 @@
-;;; ifttt-trigger.el --- Post IFTTT Events           -*- lexical-binding: t; -*-
+;;; ifttt-trigger.el --- Trigger IFTTT Events           -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016  Haden Pike
 
